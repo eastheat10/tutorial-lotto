@@ -8,4 +8,12 @@ public class Lotto {
         this.bonusNumber = bonusNumber;
     }
 
+    public int[] getNumbers(){
+        return this.numbers;
+    }
+
+    public int getBonusNumber(){
+        return this.bonusNumber;
+    }
+
 }
