@@ -49,11 +49,11 @@ public class LottoStore {
         AtomicBoolean bonusTag = new AtomicBoolean(false);
         AtomicInteger count = new AtomicInteger();
         IntStream myNumStream =  Arrays.stream(myNumbers);
-        List<Integer> winNumList = Arrays.stream(winNumbers).boxed().collect(Collectors.toList());
+        Set<Integer> winNumSet = Arrays.stream(winNumbers).boxed().collect(Collectors.toSet());
 
         myNumStream.forEach((i)->{
             System.out.print(i+" ");
-            if(winNumList.contains(i)){
+            if(winNumSet.contains(i)){
                   count.getAndIncrement();
             }
             if(i==bonusNum){
